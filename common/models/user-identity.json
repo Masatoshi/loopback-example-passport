@@ -2,7 +2,47 @@
   "name": "userIdentity",
   "plural": "userIdentities",
   "base": "UserIdentity",
-  "properties": {},
+  "options": { "postgresql": { "table": "user_identities" } },
+  "idInjection": true,
+  "properties": {
+    "provider": {
+      "type": "String",
+      "required": true
+    },
+    "authScheme": {
+      "type": "String",
+      "postgresql": { "columnName": "auth_scheme" },
+      "required": true
+    },
+    "externalId": {
+      "type": "String",
+      "postgresql": { "columnName": "external_id" },
+      "required": true
+    },
+    "userId": {
+      "type": "Number",
+      "postgresql": { "columnName": "user_id" },
+      "required": true
+    },
+    "profile": {
+      "type": "JSON",
+      "postgresql": { "dataType": "text" },
+      "required": false
+    },
+    "credentials": {
+      "type": "JSON",
+      "postgresql": { "dataType": "text" },
+      "required": false
+    },
+   "created": {
+      "type": "Date",
+      "required": false
+    },
+    "modified": {
+      "type": "Date",
+      "required": false
+    }
+  },
   "validations": [],
   "relations": {
     "user": {

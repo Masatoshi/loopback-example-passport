@@ -7,19 +7,19 @@
     ]
   },
   "user": {
-    "dataSource": "db",
+    "dataSource": "pgDB",
     "public": true
   },
   "accessToken": {
-    "dataSource": "db",
+    "dataSource": "pgDB",
     "public": true
   },
   "userCredential": {
-    "dataSource": "db",
+    "dataSource": "pgDB",
     "public": true
   },
   "userIdentity": {
-    "dataSource": "db",
+    "dataSource": "pgDB",
     "public": true
   },
   "ACL": {

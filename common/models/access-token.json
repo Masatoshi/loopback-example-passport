@@ -2,7 +2,28 @@
   "name": "accessToken",
   "plural": "accessTokens",
   "base": "AccessToken",
-  "properties": {},
+  "options": { "postgresql": { "table": "access_tokens" } },
+  "idInjection": false,
+  "properties": {
+    "id": {
+      "type": "String",
+      "id": 1,
+      "required": false
+    },
+    "ttl": {
+      "type": "Number",
+      "required": false
+    },
+    "userId": {
+      "type": "Number",
+      "postgresql": { "columnName": "user_id" },
+      "required": false
+    },
+    "created": {
+      "type": "Date",
+      "required": false
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],

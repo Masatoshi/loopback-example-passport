@@ -2,5 +2,14 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "pgDB": {
+    "name": "pgDB",
+    "connector": "postgresql",
+    "port": 5432,
+    "debug": true,
+    "database": "node_test",
+    "username": "node_test",
+    "password": "node_test"
   }
 }
